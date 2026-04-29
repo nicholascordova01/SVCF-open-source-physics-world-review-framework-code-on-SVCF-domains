@@ -149,9 +149,9 @@ def domain_05_casimir(d_m=1e-6):
 def domain_11_grav_lensing():
     print("D11  GRAVITATIONAL LENSING (solar limb)")
     # Standard GR: 1.751 arcsec = 4GM/(c^2 * R_sun) in arcseconds
-    R_sun = 6.96e8   # m
-    M_sun_val = M_SUN
-    theta_GR   = 4.0 * G_NEWTON * M_sun_val / (C_LIGHT**2 * R_sun)
+    r_sun = 6.96e8   # m
+    m_sun_val = M_SUN
+    theta_GR   = 4.0 * G_NEWTON * m_sun_val / (C_LIGHT**2 * r_sun)
     theta_arcs = theta_GR * (180.0 / np.pi) * 3600.0
     # SVCF: same result — GR is limit of SVCF as eta->0
     _result(11, "Light deflection (solar limb)", theta_arcs, 1.75, "arcsec",
@@ -363,9 +363,9 @@ def law2_chirality_tax():
     print()
     # eta'-mesic D46
     m0_eta = 957.78   # MeV
-    Delta_m = (1.0 - B) * m0_eta   # = (1/33)*m0
+    delta_m = (1.0 - B) * m0_eta   # = (1/33)*m0
     print(f"  D46 eta'-mesic mass reduction (Osaka/GSI April 25 2026):")
-    print(f"    Delta_m = (1-B)*m0 = (1/33)*{m0_eta} = {Delta_m:.2f} MeV  [lower bound]")
+    print(f"    Delta_m = (1-B)*m0 = (1/33)*{m0_eta} = {delta_m:.2f} MeV  [lower bound]")
     print(f"    Observed: 40-100 MeV  (above lower bound, confirmed directional)")
     print()
     # Homochirality D40
